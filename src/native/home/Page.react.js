@@ -2,6 +2,9 @@ import Component from 'react-pure-render/component';
 import React, { PropTypes, Text, View } from 'react-native';
 import appStyles from '../app/styles';
 import { connect } from 'react-redux';
+import CoverFlowView from '../coverflow/Coverflow.react';
+import SoundCloud from "../soundcloud/SoundCloud.react"
+
 
 class Page extends Component {
 
@@ -13,14 +16,11 @@ class Page extends Component {
     const { msg } = this.props;
 
     return (
-      <View style={[appStyles.centeredView, { paddingBottom: 64 }]}>
-        <Text style={[appStyles.centered, appStyles.paragraph]}>
-          {msg.iosInfoText}
-        </Text>
+      <View style={[appStyles.centeredView, { paddingBottom: 0, borderColor: "green"}]}>
+        <SoundCloud />
       </View>
     );
   }
-
 }
 
 export default connect(state => ({
